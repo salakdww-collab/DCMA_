@@ -33,26 +33,3 @@ S2 joint-mediator ablation:
 ```sh
 S2_ABLAT_R_REP=100 Rscript experiment/ablation/run_s2_joint_ablation.R
 ```
-
-IHDP semi-synthetic experiment:
-
-```sh
-IHDP_BASE_CSV=/path/to/ihdp_npci_1.csv \
-IHDP_SEMISYNTH_OUT_DIR=data/ihdp_covtail_skew_tnnls_v7d_n5000_rep100 \
-IHDP_R_REP=100 \
-IHDP_SCENARIO_LIST=IHDPMechanismThreeChannelSmoothTail \
-Rscript experiment/ihdp_semisynthetic/prepare_ihdp_semisynth_3m.R
-
-TNNLS_COVTAIL_REP100_MANIFEST=data/ihdp_covtail_skew_tnnls_v7d_n5000_rep100/manifest.csv \
-Rscript experiment/ihdp_semisynthetic/run_ihdp_dcma.R
-```
-
-NHANES liver experiment:
-
-```sh
-Rscript experiment/nhanes_liver/prepare_nhanes_liver_2017_2018.R
-
-NHANES_LIVER_IN_CSV=data/nhanes_2017_2018_liver/nhanes_2017_2018_liver_analysis_fasting.csv \
-NHANES_LIVER_FULLBOOT_N=100 \
-Rscript experiment/nhanes_liver/run_nhanes_liver.R
-```
